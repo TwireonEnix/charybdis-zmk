@@ -60,7 +60,6 @@
         };
     };
 
-/ {
     macros {
         addSurrounds: addSurrounds {
             compatible = "zmk,behavior-macro";
