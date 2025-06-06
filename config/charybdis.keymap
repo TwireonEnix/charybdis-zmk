@@ -3,6 +3,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     tapping-term-ms = <200>;
@@ -18,7 +19,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 37>;
             flavor = "tap-preferred";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
@@ -102,10 +103,10 @@
 
         win {
             bindings = <
-&kp LG(TAB)        &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &tapKpHoldToMac 1 SLASH  &kp LA(SPACE)
-&kp RIGHT_ALT      &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A          &kp SINGLE_QUOTE
-&hml ENTER ESCAPE  &kp W            &kp J            &hml LC(C) V         &hml LC(V) D       &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD               &mt LA(F4) DELETE
-                                                     &lt 3 TAB            &kp SPACE          &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER
+&kp LG(TAB)       &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &tapKpHoldToMac 1 SLASH  &kp LA(SPACE)
+&kp RIGHT_ALT     &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A          &kp SINGLE_QUOTE
+&mt ENTER ESCAPE  &kp W            &kp J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD               &mt LA(F4) DELETE
+                                                    &lt 3 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER
             >;
         };
 
@@ -114,7 +115,7 @@
 &kp LC(UP_ARROW)  &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z         &kp F              &kp O            &kp U            &tapKpHoldToWin 0 SLASH  &kp LG(SPACE)
 &kp RIGHT_ALT     &hml LEFT_CONTROL C  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_GUI E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL A      &kp SINGLE_QUOTE
 &mt ESCAPE ENTER  &kp W                &kp J            &mt LG(C) V      &mt LG(V) D        &kp K            &kp X         &kp H              &kp COLON        &kp COMMA        &kp PERIOD               &mt LG(Q) DELETE
-                                                        &lt 5 TAB        &kp SPACE          &kp BACKSPACE    &lt 4 ESCAPE  &lt 6 ENTER
+                                                        &lt 5 TAB        &lt 7 SPACE        &kp BACKSPACE    &lt 4 ESCAPE  &lt 6 ENTER
             >;
         };
 
@@ -161,6 +162,17 @@
 &mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &kp HASH   &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp RA(N5)         &bt BT_NXT
                                                                    &jsfn                 &kp SPACE              &kp BACKSPACE    &trans     &kp ENTER
             >;
+        };
+
+        Mouse {
+            bindings = <
+&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &mkp MB4   &mkp MB5   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans     &trans     &trans    &trans  &trans
+            >;
+
+            label = "Mouse";
         };
     };
 };
