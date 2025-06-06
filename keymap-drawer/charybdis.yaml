@@ -38,7 +38,7 @@ layers:
   - .
   - {t: '$$mdi:backspace-reverse-outline$$', h: Alt+F4}
   - {t: '$$mdi:keyboard-tab$$', h: nav-win}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: Mouse}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, h: num-win}
   - {t: '$$mdi:keyboard-return$$', h: symbols}
@@ -80,7 +80,7 @@ layers:
   - .
   - {t: '$$mdi:backspace-reverse-outline$$', h: Gui+Q}
   - {t: '$$mdi:keyboard-tab$$', h: nav-mac}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: Mouse}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, h: num-mac}
   - {t: '$$mdi:keyboard-return$$', h: symbols}
@@ -294,3 +294,45 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', type: held}
+  Mouse:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - '&mkp LCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mkp MB5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
