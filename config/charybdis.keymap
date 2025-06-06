@@ -40,8 +40,65 @@
             require-prior-idle-ms = <125>;
             hold-trigger-on-release;
         };
+
+   tapKpHoldToMac: tapKpHoldToMac {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPKPHOLDTOMAC";
+            bindings = <&toMac>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            flavor = "tap-preferred";
+        };
+
+        tapKpHoldToWin: tapKpHoldToWin {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPKPHOLDTOWIN";
+            bindings = <&toWin>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            flavor = "tap-preferred";
+        };
     };
 
+/ {
+    macros {
+        addSurrounds: addSurrounds {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp Z &kp I &kp W>;
+            label = "ADDSURROUNDS";
+        };
+
+        jsfn: jsfn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            label = "JSFN";
+        };
+
+        upDirectory: upDirectory {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD &kp PERIOD &kp SLASH>;
+            label = "UPDIRECTORY";
+        };
+
+        toWin: toWin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "TOWIN";
+        };
+
+        toMac: toMac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 1>;
+            label = "TOMAC";
+        };
+    };
 
    keymap {
         compatible = "zmk,keymap";
