@@ -10,8 +10,6 @@
 };
 
 / {
-    #include "combos.dtsi"
-
     behaviors {
         hml: homewrow_mods_left {
             compatible = "zmk,behavior-hold-tap";
@@ -41,7 +39,7 @@
             hold-trigger-on-release;
         };
 
-   tapKpHoldToMac: tapKpHoldToMac {
+        tapKpHoldToMac: tapKpHoldToMac {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPKPHOLDTOMAC";
             bindings = <&toMac>, <&kp>;
