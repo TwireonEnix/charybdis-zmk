@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   win:
-  - '&mkp MB1'
+  - Gui+$$mdi:keyboard-tab$$
   - Q
   - L
   - Y
@@ -13,7 +13,7 @@ layers:
   - U
   - {t: /, h: '&toMac 1'}
   - Alt+$$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', h: RIGHT ALT}
+  - RIGHT ALT
   - {t: C, h: LEFT GUI}
   - {t: R, h: LEFT ALT}
   - {t: S, h: LEFT CONTROL}
@@ -25,7 +25,7 @@ layers:
   - {t: I, h: LEFT ALT}
   - {t: A, h: LEFT GUI}
   - ''''
-  - Gui+$$mdi:keyboard-tab$$
+  - {t: ESCAPE, h: '$$mdi:keyboard-return$$'}
   - W
   - J
   - {t: V, h: Ctl+C}
@@ -43,7 +43,7 @@ layers:
   - {t: ESCAPE, h: num-win}
   - {t: '$$mdi:keyboard-return$$', h: symbols}
   mac:
-  - '&mkp MB1'
+  - Ctl+UP ARROW
   - Q
   - L
   - Y
@@ -55,7 +55,7 @@ layers:
   - U
   - {t: /, h: '&toWin'}
   - Gui+$$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', h: RIGHT ALT}
+  - RIGHT ALT
   - {t: C, h: LEFT CONTROL}
   - {t: R, h: LEFT ALT}
   - {t: S, h: LEFT GUI}
@@ -67,7 +67,7 @@ layers:
   - {t: I, h: LEFT ALT}
   - {t: A, h: LEFT CONTROL}
   - ''''
-  - Ctl+UP ARROW
+  - {t: ESCAPE, h: '$$mdi:keyboard-return$$'}
   - W
   - J
   - {t: V, h: Gui+C}
