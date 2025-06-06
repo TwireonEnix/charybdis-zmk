@@ -42,7 +42,6 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, h: num-win}
   - {t: '$$mdi:keyboard-return$$', h: symbols}
-  - $$mdi:backspace-reverse-outline$$
   mac:
   - Ctl+UP ARROW
   - Q
@@ -85,7 +84,6 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, h: num-mac}
   - {t: '$$mdi:keyboard-return$$', h: symbols}
-  - $$mdi:backspace-reverse-outline$$
   num-win:
   - ''
   - ''
@@ -128,7 +126,6 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, type: held}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:backspace-reverse-outline$$
   nav-win:
   - ''
   - Alt+LEFT ARROW
@@ -171,7 +168,6 @@ layers:
   - $$mdi:bluetooth-off$$
   - '&caps_word'
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:backspace-reverse-outline$$
   num-mac:
   - ''
   - ''
@@ -214,7 +210,6 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, type: held}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:backspace-reverse-outline$$
   nav-mac:
   - ''
   - Alt+$$mdi:arrow-left-bold$$
@@ -256,7 +251,6 @@ layers:
   - ''
   - $$mdi:bluetooth-off$$
   - '&caps_word'
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   symbols:
   - ''
@@ -300,4 +294,3 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', type: held}
-  - {t: ▽, type: trans}
