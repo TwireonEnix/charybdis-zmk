@@ -1,6 +1,6 @@
 layout: {
-  zmk_keyboard: "charybdis/3x6"
-  zmk_layout: "LAYOUT_split_3x6_3"
+  zmk_keyboard: "charybdis/3x5"
+  zmk_layout: "LAYOUT_split_3x5_3"
 }
 layers:
   win:
