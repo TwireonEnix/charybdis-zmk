@@ -3,12 +3,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
-
-&mt {
-    tapping-term-ms = <220>;
-    flavor = "tap-preferred";
-};
 
 / {
     behaviors {
@@ -122,7 +116,7 @@
         num-win {
             bindings = <
 &none     &none         &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &kp PLUS         &kp F12     &kp F7             &kp F8               &kp F9           &kp SLASH     &none
-&kp RALT  &kp LEFT_GUI  &mt LEFT_ALT NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
+&kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
 &none     &kp COMMA     &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &kp STAR         &kp F10     &kp F1             &kp F2               &kp F3           &kp DOT       &kp DELETE
                                                &kp SPACE                  &kp NUMBER_0             &kp BACKSPACE    &kp ESCAPE  &kp ENTER
             >;
@@ -140,7 +134,7 @@
         num-mac {
             bindings = <
 &none     &none             &kp NUMBER_7           &kp NUMBER_8           &kp NUMBER_9             &kp PLUS         &kp F12     &kp F7             &kp F8           &kp F9           &kp SLASH         &none
-&kp RALT  &kp LEFT_CONTROL  &mt LEFT_ALT NUMBER_4  &mt LEFT_GUI NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &mt LEFT_SHIFT F4  &mt LEFT_GUI F5  &mt LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
+&kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_GUI F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
 &none     &kp COMMA         &kp NUMBER_1           &kp NUMBER_2           &kp NUMBER_3             &kp ASTRK        &kp F10     &kp F1             &kp F2           &kp F3           &kp PERIOD        &kp DELETE
                                                    &kp SPACE              &kp NUMBER_0             &kp BACKSPACE    &kp ESCAPE  &kp ENTER
             >;
