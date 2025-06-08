@@ -1,7 +1,11 @@
-layout: {
-  zmk_keyboard: "charybdis/3x5"
-  zmk_layout: "LAYOUT_split_3x5_3"
-}
+layout: 
+ custom_layout:
+    split: true
+    rows: 3
+    columns: 6
+    thumbs:
+      left: ["T1", "T2", "T3"]
+      right: ["T4", "T5"]
 layers:
   win:
   - Gui+$$mdi:keyboard-tab$$
