@@ -1,5 +1,4 @@
 layout: {
-  zmk_keyboard: charybdis
   zmk_keyboard: "charybdis/3x6"
   zmk_layout: "LAYOUT_split_3x6_3"
 }
