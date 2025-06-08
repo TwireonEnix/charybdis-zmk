@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-_lt {
+&lt {
     tapping-term-ms = <200>;
     flavor = "tap-preferred";
     compatible = "zmk,behavior-hold-tap";
