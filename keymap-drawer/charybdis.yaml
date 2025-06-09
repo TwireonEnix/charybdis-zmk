@@ -38,7 +38,7 @@ layers:
   - .
   - {t: '$$mdi:backspace-reverse-outline$$', h: Alt+F4}
   - {t: '$$mdi:keyboard-tab$$', h: nav-win}
-  - {t: '$$mdi:keyboard-space$$', h: Mouse}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, h: num-win}
   - {t: '$$mdi:keyboard-return$$', h: symbols}
@@ -80,7 +80,7 @@ layers:
   - .
   - {t: '$$mdi:backspace-reverse-outline$$', h: Gui+Q}
   - {t: '$$mdi:keyboard-tab$$', h: nav-mac}
-  - {t: '$$mdi:keyboard-space$$', h: Mouse}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, h: num-mac}
   - {t: '$$mdi:keyboard-return$$', h: symbols}
@@ -121,7 +121,7 @@ layers:
   - F3
   - .
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-tab$$
   - '0'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, type: held}
@@ -205,7 +205,7 @@ layers:
   - F3
   - .
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-tab$$
   - '0'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, type: held}
@@ -332,7 +332,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
