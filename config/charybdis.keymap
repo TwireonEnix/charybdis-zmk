@@ -178,7 +178,7 @@
 &trans  &trans  &trans     &msc SCRL_UP     &msc SCRL_DOWN     &trans    &trans  &trans     &msc SCRL_DOWN  &msc SCRL_UP  &trans    &trans
 &trans  &msc SCRL_RIGHT  &mkp MCLK  &mkp RCLK  &mkp LCLK  &msc SCRL_LEFT    &msc SCRL_LEFT     &mkp LCLK       &mkp RCLK     &mkp MCLK &msc SCRL_RIGHT  &trans
 &trans  &trans  &trans     &mkp MB4   &mkp MB5   &trans    &trans  &mkp MB5   &mkp MB4        &trans        &trans    &trans
-                           &trans     &trans     &trans    &trans  &trans
+                           &trans     &tmkp LCLK    &trans    &trans  &trans
             >;
 
             label = "Mouse";
