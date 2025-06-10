@@ -65,6 +65,7 @@
 
     ssd1306@3c {
         compatible = "solomon,ssd1306fb";
+        segment-offset = <0>;
         reg = <0x3c>;
         width = <128>;
         height = <64>;
