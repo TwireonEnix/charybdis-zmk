@@ -50,8 +50,8 @@
 
     i2c1_default: i2c1_default {
         group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 14)>,  /* SDA on P0.05 */
-                    <NRF_PSEL(TWIM_SCL, 0, 15)>; /* SCL on P0.04 */
+            psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
+                    <NRF_PSEL(TWIM_SCL, 1, 13)>; 
         };
     };
 };
