@@ -4,19 +4,14 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-    };
-    
-    / {
-    chosen {
         zephyr,display = &ssd1306_oled;
     };
-};
 
     vbatt: vbatt {
 	compatible = "zmk,battery-nrf-vddh";
     };
 
-&i2c1 {
+ &i2c1 {
     compatible = "nordic,nrf-twim";
     status = "okay";
     pinctrl-0 = <&i2c1_default>;
