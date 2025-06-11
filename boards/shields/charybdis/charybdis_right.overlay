@@ -79,7 +79,7 @@
         compatible = "solomon,ssd1306fb";
         segment-offset = <0>;
         label = "ssd_oled";
-        reg = <0x3d>;
+        reg = <0x3c>;
         width = <128>;
         height = <32>;
         page-offset = <0>;
