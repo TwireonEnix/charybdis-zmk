@@ -61,7 +61,8 @@
     compatible = "nordic,nrf-twim";
     status = "okay";
     pinctrl-0 = <&i2c1_default>;
-    pinctrl-names = "default";
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
     #address-cells = <1>;
     #size-cells = <0>;
     clock-frequency = <I2C_BITRATE_STANDARD>;
