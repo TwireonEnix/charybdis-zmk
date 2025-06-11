@@ -50,15 +50,15 @@
 
     i2c1_default: i2c1_default {
         group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 1, 13)>, 
-                    <NRF_PSEL(TWIM_SCL, 1, 11)>; 
+            psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
+                    <NRF_PSEL(TWIM_SCL, 1, 13)>; 
         };
     };
 
     i2c1_sleep: i2c1_sleep {
         group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 1, 13)>,
-                    <NRF_PSEL(TWIM_SCL, 1, 11)>;
+            psels = <NRF_PSEL(TWIM_SDA, 1, 11)>,
+                    <NRF_PSEL(TWIM_SCL, 1, 13)>;
             low-power-enable;
         };
     };
@@ -81,10 +81,10 @@
         label = "ssd_oled";
         reg = <0x3c>;
         width = <128>;
-        height = <64>;
+        height = <32>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <63>;
+        multiplex-ratio = <31>;
         prechargep = <0xF1>;
         reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // optional
     };
