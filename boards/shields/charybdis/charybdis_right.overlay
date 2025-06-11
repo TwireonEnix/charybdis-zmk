@@ -48,12 +48,6 @@
         };
     };
 
-    i2c1_default: i2c1_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
-                    <NRF_PSEL(TWIM_SCL, 1, 13)>; 
-        };
-    };
 };
 
 &spi0 {
