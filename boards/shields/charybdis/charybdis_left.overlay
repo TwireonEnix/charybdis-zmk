@@ -51,14 +51,14 @@
     pinctrl-1 = <&i2c1_sleep>;
     pinctrl-names = "default", "sleep";
     #address-cells = <1>;
-    #size-cells = <0>;
+    #size-cells = <1>;
 };
 
 / {
     ssd_oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         label = "ssd_oled";
-        reg = <0x3c>;
+        reg = <0x3C>;
         width = <128>;
         height = <32>;
         segment-offset = <0>;
