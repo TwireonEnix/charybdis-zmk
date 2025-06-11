@@ -68,7 +68,6 @@
 
     ssd_oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
-        i2c = <&i2c1>;
         segment-offset = <0>;
         label = "ssd_oled";
         reg = <0x3c>;
