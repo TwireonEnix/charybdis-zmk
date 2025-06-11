@@ -67,9 +67,10 @@
     clock-frequency = <I2C_BITRATE_STANDARD>;
 
     ssd_oled: ssd1306@3c {
-        compatible = "solokeys,ssd1306";
+        compatible = "solomon,ssd1306fb";
         i2c = <&i2c1>;
         segment-offset = <0>;
+        label = "ssd_oled";
         reg = <0x3c>;
         width = <128>;
         height = <64>;
