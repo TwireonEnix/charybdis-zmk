@@ -25,3 +25,50 @@
 		, <&pro_micro 9 GPIO_ACTIVE_HIGH>
 		;
 };
+
+
+&pinctrl {
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
+                    <NRF_PSEL(TWIM_SCL, 1, 13)>; 
+        };
+    };
+
+    i2c1_sleep: i2c1_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 1, 11)>,
+                    <NRF_PSEL(TWIM_SCL, 1, 13)>;
+            low-power-enable;
+        };
+    };
+};
+
+&i2c1  {
+    compatible = "nordic,nrf-twim";
+    status = "okay";
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
+    #address-cells = <1>;
+    #size-cells = <0>;
+};
+
+/ {
+    ssd_oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        label = "ssd_oled";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        com-invdir;
+        segment-remap;
+        com-sequential;
+        prechargep = <0x22>;
+        bus = <&i2c1>;
+    };    
+};
