@@ -47,7 +47,7 @@
     ssd1306@3c {
         compatible = "solomon,ssd1306fb-i2c";
         segment-offset = <0>;
-        reg = <0x3c>;
+        reg = <0x0000003c 0x00 0x00>;
         width = <128>;
         height = <64>;
         page-offset = <0>;
