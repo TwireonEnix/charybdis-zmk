@@ -15,7 +15,6 @@ manifest:
       repo-path: zmk
       revision: main
       remote: zmkfirmware
-      import: true
     - name: zmk-pmw3610-driver
       remote: inorichi
       revision: main
