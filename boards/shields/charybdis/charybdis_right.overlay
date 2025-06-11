@@ -48,7 +48,39 @@
         };
     };
 
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
+                    <NRF_PSEL(TWIM_SCL, 1, 13)>; 
+        };
+    };
+
 };
+
+&i2c1 {
+    compatible = "nordic,nrf-twim";
+    status = "okay";
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-names = "default";
+    #address-cells = <1>;
+    #size-cells = <0>;
+    clock-frequency = <I2C_BITRATE_STANDARD>;
+
+    ssd_oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb-i2c";
+        segment-offset = <0>;
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+        prechargep = <0xF1>;
+        rotation = <1>;
+        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // optional
+    };
+};
+
 
 &spi0 {
     status = "okay";
@@ -65,8 +97,8 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         // snipe-layers = <3 5>;
-	scroll-layers = <3 5>;
-	// automouse-layer = <7>;
+	    scroll-layers = <3 5>;
+	    // automouse-layer = <7>;
     };
 };
 
@@ -74,6 +106,5 @@
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-
   };
 };
