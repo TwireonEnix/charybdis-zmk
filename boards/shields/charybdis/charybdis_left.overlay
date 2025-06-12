@@ -70,6 +70,6 @@
 
 / {
     chosen {
-        zephyr,display = &ssd1306_3c;
+        zephyr,display = &ssd_oled;
     };
 };
