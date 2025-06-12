@@ -116,3 +116,9 @@
     device = <&trackball>;
   };
 };
+
+/ {
+    chosen {
+        zephyr,display = &ssd1306_3c;
+    };
+};
