@@ -11,7 +11,6 @@
         zmk,display = &ssd_oled;
         zephyr,display = &ssd_oled;
     };
-
 };
 
 &default_transform {
@@ -58,15 +57,15 @@
 
    i2c0_default: i2c0_default {
        group1 {
-           psels = <NRF_PSEL(TWIM_SDA, 0, 43)>, 
-                   <NRF_PSEL(TWIM_SCL, 0, 45)>; 
+           psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
+                   <NRF_PSEL(TWIM_SCL, 1, 13)>; 
        };
    };
 
    i2c0_sleep: i2c0_sleep {
        group1 {
-           psels = <NRF_PSEL(TWIM_SDA, 1, 43)>,
-                   <NRF_PSEL(TWIM_SCL, 1, 45)>;
+           psels = <NRF_PSEL(TWIM_SDA, 1, 11)>,
+                   <NRF_PSEL(TWIM_SCL, 1, 13)>;
           low-power-enable;
         };
     };
@@ -79,8 +78,6 @@
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
- //  sda-pin = <43>;
- //  scl-pin = <45>;
 
     ssd_oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
