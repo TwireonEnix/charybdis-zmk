@@ -6,6 +6,13 @@
 
 #include "charybdis.dtsi"
 
+/ {
+    chosen {
+        zephyr,display = &ssd_oled;
+    };
+};
+
+
 &kscan0 {
 	compatible = "zmk,kscan-gpio-matrix";
 	
@@ -68,8 +75,3 @@
     };    
 };
 
-/ {
-    chosen {
-        zmk,display = &ssd_oled;
-    };
-};
