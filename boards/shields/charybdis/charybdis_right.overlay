@@ -96,7 +96,7 @@
 };
 
 / { 
-    oled_controller: &ssd_oled {
+    oled_controller: {
         status {
             compatible = "zmk,display-status-screen";
             widgets = <
