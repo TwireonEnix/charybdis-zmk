@@ -5,10 +5,12 @@
  */
  
 #include "charybdis.dtsi"
+#include <dt-bindings/zmk/display.h>
 
 / {
     chosen {
         zmk,display = &ssd_oled;
+        zephyr,display = &ssd_oled;
     };
 
  //   oled_controller: &ssd_oled {
