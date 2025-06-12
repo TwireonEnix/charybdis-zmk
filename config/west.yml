@@ -5,8 +5,8 @@ manifest:
     - name: inorichi
       url-base: https://github.com/inorichi
      # nice_oled
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
+    # - name: mctechnology17
+    #   url-base: https://github.com/mctechnology17
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,8 +16,8 @@ manifest:
       remote: inorichi
       revision: main
      # nice_oled
-    - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: main
+    # - name: zmk-nice-oled
+    #   remote: mctechnology17
+      # revision: main
   self:
     path: config
