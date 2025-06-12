@@ -101,7 +101,6 @@
         segment-remap;
         com-sequential;
         prechargep = <0x22>;
-        power-supply = <&vcc_3v3>;
     };    
 };
 
