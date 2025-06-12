@@ -12,17 +12,6 @@
         zephyr,display = &ssd_oled;
     };
 
-    oled_controller: &ssd_oled {
-        status {
-            compatible = "zmk,display-status-screen";
-            widgets = <
-                wpm_status
-                battery_status
-                output_status
-                layer_status
-            >;
-        };
-    };
 };
 
 &default_transform {
@@ -109,6 +98,19 @@
     };    
 };
 
+/ { 
+    oled_controller: &ssd_oled {
+        status {
+            compatible = "zmk,display-status-screen";
+            widgets = <
+                wpm_status
+                battery_status
+                output_status
+                layer_status
+            >;
+        };
+    };
+};
 
 &spi0 {
     status = "okay";
