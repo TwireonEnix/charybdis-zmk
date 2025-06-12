@@ -62,17 +62,17 @@
         };
     };
 
-   i2c1_default: i2c1_default {
+   i2c0_default: i2c0_default {
        group1 {
-           psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
-                   <NRF_PSEL(TWIM_SCL, 1, 13)>; 
+           psels = <NRF_PSEL(TWIM_SDA, 0, 43)>, 
+                   <NRF_PSEL(TWIM_SCL, 0, 45)>; 
        };
    };
 
-   i2c1_sleep: i2c1_sleep {
+   i2c0_sleep: i2c0_sleep {
        group1 {
-           psels = <NRF_PSEL(TWIM_SDA, 1, 11)>,
-                   <NRF_PSEL(TWIM_SCL, 1, 13)>;
+           psels = <NRF_PSEL(TWIM_SDA, 1, 43)>,
+                   <NRF_PSEL(TWIM_SCL, 1, 45)>;
           low-power-enable;
         };
     };
@@ -82,8 +82,8 @@
 &i2c0  {
     compatible = "nordic,nrf-twim";
     status = "okay";
-    pinctrl-0 = <&i2c1_default>;
-    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
  //  sda-pin = <43>;
  //  scl-pin = <45>;
