@@ -43,25 +43,44 @@
     };
 };
 
-&i2c0 {
+ 
+&pinctrl {
+   i2c0_default: i2c0_default {
+       group1 {
+           psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
+                   <NRF_PSEL(TWIM_SCL, 1, 13)>; 
+       };
+   };
+
+   i2c0_sleep: i2c0_sleep {
+       group1 {
+           psels = <NRF_PSEL(TWIM_SDA, 1, 11)>,
+                   <NRF_PSEL(TWIM_SCL, 1, 13)>;
+          low-power-enable;
+        };
+    };
+};
+
+&i2c0  {
     compatible = "nordic,nrf-twim";
     status = "okay";
-    sda-pin = <22>;  // P0.22 (D4)
-    scl-pin = <24>;  // P0.24 (D5)
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
 
     ssd_oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;  // Try 0x3d if no response
+        reg = <0x3d>;
         width = <128>;
-        height = <32>;  // Use 64 if 128x64 display
+        height = <32>;
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <31>;
-        segment-remap;
         com-invdir;
+        segment-remap;
+        com-sequential;
         prechargep = <0x22>;
-        contrast = <0xFF>;  // Max brightness
-    };
+    };    
 };
 
