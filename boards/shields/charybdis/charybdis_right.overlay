@@ -93,7 +93,6 @@
         segment-remap;
         com-sequential;
         prechargep = <0x22>;
-        contrast = <0x80>;
     };    
 };
 
