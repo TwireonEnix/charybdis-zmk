@@ -85,8 +85,8 @@
    // pinctrl-0 = <&i2c1_default>;
    // pinctrl-1 = <&i2c1_sleep>;
    // pinctrl-names = "default", "sleep";
-   sda-pin = <11>;
-   scl-pin = <13>
+   sda-pin = <43>;
+   scl-pin = <45>
 
     ssd_oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
