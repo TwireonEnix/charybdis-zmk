@@ -65,7 +65,3 @@
     };
 };
 
-    display_status {
-        compatible = "zmk,display-status-screen";
-    };
-
