@@ -2,6 +2,7 @@
 
 / {
     chosen {
+        zephyr,display = &ssd_oled;
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
@@ -41,3 +42,30 @@
         diode-direction = "row2col";
     };
 };
+
+&i2c0 {
+    compatible = "nordic,nrf-twim";
+    status = "okay";
+    sda-pin = <22>;  // P0.22 (D4)
+    scl-pin = <24>;  // P0.24 (D5)
+
+    ssd_oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;  // Try 0x3d if no response
+        width = <128>;
+        height = <32>;  // Use 64 if 128x64 display
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        prechargep = <0x22>;
+        contrast = <0xFF>;  // Max brightness
+    };
+};
+
+    display_status {
+        compatible = "zmk,display-status-screen";
+    };
+
