@@ -79,7 +79,7 @@
     pinctrl-1 = <&i2c1_sleep>;
     pinctrl-names = "default", "sleep";
     ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
+        compatible = "solomon,ssd1306fb-i2c";
         reg = <0x3c>;
         label = "SSD1306";
         width = <128>;
@@ -119,8 +119,8 @@
   };
 };
 
-/* / { */
-/*   display_status { */
-/*     compatible = "zmk,display-status-screen"; */
-/*   }; */
-/* }; */
+/ {
+  display_status {
+    compatible = "zmk,display-status-screen";
+  };
+};
