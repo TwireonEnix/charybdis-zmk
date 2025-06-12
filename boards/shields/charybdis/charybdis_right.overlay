@@ -121,8 +121,8 @@
   };
 };
 
-/ {
-  display_status {
-    compatible = "zmk,display-status-screen";
-  };
-};
+/* / { */
+/*   display_status { */
+/*     compatible = "zmk,display-status-screen"; */
+/*   }; */
+/* }; */
