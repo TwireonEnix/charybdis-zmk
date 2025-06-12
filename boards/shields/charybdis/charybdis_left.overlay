@@ -73,3 +73,5 @@
         zephyr,display = &ssd_oled;
     };
 };
+
+&zmk_display { display = <&ssd_oled>; }
