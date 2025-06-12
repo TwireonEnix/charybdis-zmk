@@ -120,5 +120,8 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
   };
+    display_status {
+        compatible = "zmk,display-status-screen";
+    };
 };
 
