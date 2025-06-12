@@ -95,17 +95,9 @@
     };    
 };
 
-/ { 
-    oled_controller: {
-        status {
-            compatible = "zmk,display-status-screen";
-            widgets = <
-                wpm_status
-                battery_status
-                output_status
-                layer_status
-            >;
-        };
+/ {
+    display_status {
+        compatible = "zmk,display-status-screen";
     };
 };
 
