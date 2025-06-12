@@ -87,7 +87,7 @@
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <63>;
+        multiplex-ratio = <31>;
         prechargep = <0x22>;
     };
 };
@@ -107,8 +107,8 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         // snipe-layers = <3 5>;
-	    scroll-layers = <3 5>;
-	    // automouse-layer = <7>;
+	      scroll-layers = <3 5>;
+        // automouse-layer = <7>;
     };
 };
 
