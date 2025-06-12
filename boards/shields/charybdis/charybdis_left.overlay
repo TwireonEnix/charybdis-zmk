@@ -25,3 +25,9 @@
 		, <&pro_micro 9 GPIO_ACTIVE_HIGH>
 		;
 };
+
+/ {
+  display_status {
+    compatible = "zmk,display-status-screen";
+  };
+};
