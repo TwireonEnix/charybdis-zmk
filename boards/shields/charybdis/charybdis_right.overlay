@@ -54,30 +54,19 @@
             low-power-enable;
         };
     };
-
-   i2c0_default: i2c0_default {
-       group1 {
-           psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, 
-                   <NRF_PSEL(TWIM_SCL, 1, 13)>; 
-       };
-   };
-
-   i2c0_sleep: i2c0_sleep {
-       group1 {
-           psels = <NRF_PSEL(TWIM_SDA, 1, 11)>,
-                   <NRF_PSEL(TWIM_SCL, 1, 13)>;
-          low-power-enable;
-        };
-    };
-
 };
 
 &i2c0  {
-    compatible = "nordic,nrf-twim";
+    compatible = "zmk,i2c-bitbang";
     status = "okay";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
+    sda-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;  // P1.11
+    scl-gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;  // P1.13
+    clock-frequency = <I2C_BITRATE_STANDARD>;
+   // compatible = "nordic,nrf-twim";
+   // status = "okay";
+   // pinctrl-0 = <&i2c0_default>;
+   // pinctrl-1 = <&i2c0_sleep>;
+   // pinctrl-names = "default", "sleep";
 
     ssd_oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
