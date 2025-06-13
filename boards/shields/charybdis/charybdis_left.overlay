@@ -9,6 +9,7 @@
 / {
     chosen {
         zephyr,display = &bssd1306;
+        zmk,display = &ssd1306;
     };
 };
 
@@ -64,12 +65,12 @@
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <31>;
-        prechargep = <0x1>;
+        prechargep = <0x22>;
     };
 };
 
-/ {
-  display_status {
-    compatible = "zmk,display-status-screen";
-  };
-};
+/* / { */
+/*   display_status { */
+/*     compatible = "zmk,display-status-screen"; */
+/*   }; */
+/* }; */
