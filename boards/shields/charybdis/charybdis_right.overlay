@@ -71,7 +71,7 @@
 &i2c0 {
     status = "disabled";
 };
-
+ 
 &i2c1 {
     compatible = "nordic,nrf-twim";
     status = "okay";
@@ -81,13 +81,12 @@
     ssd1306: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
-        label = "SSD1306";
         width = <128>;
-        height = <32>;
+        height = <64>;
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <31>;
+        multiplex-ratio = <63>;
         prechargep = <0x22>;
     };
 };
@@ -113,14 +112,15 @@
 };
 
 / {
+
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
   };
+
+  display_status {
+    compatible = "zmk,display-status-screen";
+  };
+
 };
 
-/* / { */
-/*   display_status { */
-/*     compatible = "zmk,display-status-screen"; */
-/*   }; */
-/* }; */
