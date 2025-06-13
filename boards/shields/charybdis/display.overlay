@@ -1,0 +1,16 @@
+#include <dt-bindings/zmk/display.h>
+
+/ {
+  oled_display {
+    compatible = "zmk,display";
+    label = "OLED";
+    device = &ssd1306;
+    rotation = <0>;
+
+    widgets {
+      battery { position = <0 0>;  label = "BAT"; };
+      layer   { position = <0 12>; label = "LYR"; };
+      wpm     { position = <0 24>; label = "WPM"; };
+    };
+  };
+};

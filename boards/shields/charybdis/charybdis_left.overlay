@@ -8,7 +8,7 @@
 
 / {
     chosen {
-        zephyr,display = &bssd1306;
+        zephyr,display = &ssd1306;
     };
 };
 
@@ -33,36 +33,42 @@
 		;
 };
 
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>;
-        };
-    };
-
-    i2c0_sleep: i2c0_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>;
-            low-power-enable;
-        };
-    };
-};
-
+/* &pinctrl { */
+/*     i2c0_default: i2c0_default { */
+/*         group1 { */
+/*             psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>; */
+/*         }; */
+/*     }; */
+/**/
+/*     i2c0_sleep: i2c0_sleep { */
+/*         group1 { */
+/*             psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>; */
+/*             low-power-enable; */
+/*         }; */
+/*     }; */
+/* }; */
+/**/
 &i2c0 {
     compatible = "nordic,nrf-twim";
     status = "okay";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-    bssd1306: ssd1306@3c {
+    /* pinctrl-0 = <&i2c0_default>; */
+    /* pinctrl-1 = <&i2c0_sleep>; */
+    /* pinctrl-names = "default", "sleep"; */
+     sda-pin = <22>;  // P0.26 (adjust for your MCU)
+     scl-pin = <24>;  // P0.27
+
+    ssd1306: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
+        reg = <0x3C>;
         width = <128>;
-        height = <64>;
+        height = <32>;
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <63>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
         prechargep = <0x22>;
     };
 };
