@@ -54,28 +54,26 @@
         };
     };
 
-    /* i2c0_default: i2c0_default { */
-    /*     group1 { */
-    /*         psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>; */
-    /*     }; */
-    /* }; */
-    /**/
-    /* i2c0_sleep: i2c0_sleep { */
-    /*     group1 { */
-    /*         psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>; */
-    /*         low-power-enable; */
-    /*     }; */
-    /* }; */
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>;
+        };
+    };
+
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>;
+            low-power-enable;
+        };
+    };
 };
 
 &i2c0 {
     compatible = "nordic,nrf-twim";
     status = "okay";
-    /* pinctrl-0 = <&i2c0_default>; */
-    /* pinctrl-1 = <&i2c0_sleep>; */
-    /* pinctrl-names = "default", "sleep"; */
-    sda-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    scl-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
 
     ssd1306: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
