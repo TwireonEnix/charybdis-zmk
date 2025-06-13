@@ -74,8 +74,8 @@
     /* pinctrl-0 = <&i2c0_default>; */
     /* pinctrl-1 = <&i2c0_sleep>; */
     /* pinctrl-names = "default", "sleep"; */
-     sda-pin = <22>;  // P0.26 (adjust for your MCU)
-     scl-pin = <24>;  // P0.27
+    sda-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    scl-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 
     ssd1306: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
