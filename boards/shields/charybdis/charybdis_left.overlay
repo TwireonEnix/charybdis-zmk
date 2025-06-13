@@ -6,6 +6,7 @@
 
 #include "charybdis.dtsi"
 
+/ {
     chosen {
         zephyr,display = &bssd1306;
     };
@@ -56,7 +57,7 @@
     bssd1306: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
-        label = "SSD1306";
+        label = "BSSD1306";
         width = <128>;
         height = <32>;
         segment-offset = <0>;
