@@ -9,7 +9,6 @@
 / {
     chosen {
         zephyr,display = &bssd1306;
-        zmk,display = &bssd1306;
     };
 };
 
