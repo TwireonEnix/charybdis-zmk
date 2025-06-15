@@ -31,8 +31,8 @@
   nice_view: ssd1306@3c {
     compatible = "solomon,ssd1306fb";
     reg = <0x3c>;
-    label = "NiceView"
+    label = "NiceView";
     width = <128>;
     height = <32>;
   };
-}
+};
