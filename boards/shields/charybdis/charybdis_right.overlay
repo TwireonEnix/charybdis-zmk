@@ -99,14 +99,14 @@
 
   nice_view: ssd1306@3c {
     compatible = "solomon,ssd1306fb";
-    reg = <0x3c>;
+    reg = <0x3C>;
     label = "NiceView";
     width = <128>;
-    height = <56>;
+    height = <32>;
     segment-offset = <0>;        /* default safe value */
     page-offset = <0>;           /* default safe value */
     display-offset = <0>;        /* vertical shift */
-    multiplex-ratio= <55>;      /* (height - 1) */
+    multiplex-ratio= <31>;      /* (height - 1) */
     segment-remap;
     com-invdir;
     inversion-on;/* 1 = enabled, 0 = disabled */
