@@ -53,7 +53,7 @@
     height = <32>;
     segment-offset = <0>;        /* default safe value */
     page-offset = <0>;           /* default safe value */
-    display-offset = <0>;        /* vertical shift */
+    display-offset = <1>;        /* vertical shift */
     multiplex-ratio = <31>;      /* (height - 1) */
     inversion-on;/* 1 = enabled, 0 = disabled */
     reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; /*  optional, change if wired */

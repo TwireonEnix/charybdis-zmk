@@ -152,7 +152,7 @@
         };
 
         num-mac {
-            label = "NUMB";
+            label = "NUMB_M";
             bindings = <
 &none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &kp PLUS         &kp F12     &kp F7              &kp F8            &kp F9            &kp SLASH         &none
 &kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_GUI F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
@@ -162,7 +162,7 @@
         };
 
         nav-mac {
-            label = "NAV";
+            label = "NAV_M";
             bindings = <
 &none                 &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
 &none                 &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT        &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none

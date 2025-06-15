@@ -102,7 +102,7 @@
     label = "NiceView";
     width = <128>;
     height = <32>;
-    segment-offset = <0>;        /* default safe value */
+    segment-offset = <2>;        /* default safe value */
     page-offset = <0>;           /* default safe value */
     display-offset = <0>;        /* vertical shift */
     multiplex-ratio = <31>;      /* (height - 1) */
