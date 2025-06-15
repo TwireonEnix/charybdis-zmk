@@ -94,7 +94,7 @@
   pinctrl-0 = <&i2c1_default>;
   pinctrl-1 = <&i2c1_sleep>;
   pinctrl-names = "default", "sleep";
-  clock-frequency = <I2C_BITRATE_FAST>;
+  /* clock-frequency = <I2C_BITRATE_FAST>; */
 
 
   nice_view: ssd1306@3c {
@@ -111,7 +111,7 @@
     com-invdir;
     inversion-on;/* 1 = enabled, 0 = disabled */
     reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; /*  optional, change if wired */
-    prechargep = <34>;
+    prechargep = <0x22>; // 34
   };
 };
 
