@@ -58,7 +58,7 @@
     inversion-on;/* 1 = enabled, 0 = disabled */
     reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; /*  optional, change if wired */
     /* prechargep = <34>; */
-    prechargep0 = <0x22>;
+    prechargep = <0x22>;
  };
 };
 
