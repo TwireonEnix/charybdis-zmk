@@ -94,18 +94,19 @@
   pinctrl-0 = <&i2c1_default>;
   pinctrl-1 = <&i2c1_sleep>;
   pinctrl-names = "default", "sleep";
-  clock-frequency = <I2C_BITRATE_STANDARD>;
+  clock-frequency = <I2C_BITRATE_FAST>;
+
 
   nice_view: ssd1306@3c {
     compatible = "solomon,ssd1306fb";
     reg = <0x3c>;
     label = "NiceView";
     width = <128>;
-    height = <64>;
+    height = <56>;
     segment-offset = <0>;        /* default safe value */
     page-offset = <0>;           /* default safe value */
     display-offset = <0>;        /* vertical shift */
-    multiplex-ratio= <63>;      /* (height - 1) */
+    multiplex-ratio= <55>;      /* (height - 1) */
     segment-remap;
     com-invdir;
     inversion-on;/* 1 = enabled, 0 = disabled */
@@ -113,3 +114,4 @@
     prechargep = <34>;
   };
 };
+
