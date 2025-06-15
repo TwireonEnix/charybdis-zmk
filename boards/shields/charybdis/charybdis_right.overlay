@@ -1,17 +1,5 @@
-/*
- * Copyright (c) 2020 ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
- 
 #include "charybdis.dtsi"
 
-/* / { */
-/*     chosen { */
-/*         zephyr,display = &ssd1306; */
-/*     }; */
-/* }; */
-/**/
 &default_transform {
 	col-offset = <6>;
 };
@@ -53,40 +41,7 @@
             low-power-enable;
         };
     };
-    /**/
-    /* i2c0_default: i2c0_default { */
-    /*     group1 { */
-    /*         psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>; */
-    /*     }; */
-    /* }; */
-    /**/
-    /* i2c0_sleep: i2c0_sleep { */
-    /*     group1 { */
-    /*         psels = <NRF_PSEL(TWIM_SCL, 0, 24)>, <NRF_PSEL(TWIM_SDA, 0, 22)>; */
-    /*         low-power-enable; */
-    /*     }; */
-    /* }; */
 };
-/**/
-/* &i2c0 { */
-/*     compatible = "nordic,nrf-twim"; */
-/*     status = "okay"; */
-/*     pinctrl-0 = <&i2c0_default>; */
-/*     pinctrl-1 = <&i2c0_sleep>; */
-/*     pinctrl-names = "default", "sleep"; */
-/**/
-/*     ssd1306: ssd1306@3c { */
-/*         compatible = "solomon,ssd1306fb"; */
-/*         reg = <0x3C>; */
-/*         width = <128>; */
-/*         height = <32>; */
-/*         segment-offset = <0>; */
-/*         page-offset = <0>; */
-/*         display-offset = <0>; */
-/*         multiplex-ratio = <31>; */
-/*         prechargep = <0x22>; */
-/*     }; */
-/* }; */
 
 &spi1 {
     status = "okay";
@@ -109,11 +64,24 @@
 };
 
 / {
-
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
   };
-
 };
 
+&i2c1 {
+  compatible = "nordic,nrf-twi";
+  status = "okay";
+  sda-pin = <22>;
+  scl-pin = <24>;
+  clock-frequency = <I2C_BITRATE_STANDARD>;
+
+  nice_view: ssd1306@3c {
+    compatible = "solomon,ssd1306fb";
+    reg = <0x3c>;
+    label = "NiceView"
+    width = <128>;
+    height = <32>;
+  };
+}

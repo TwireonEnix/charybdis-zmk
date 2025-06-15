@@ -4,10 +4,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        /* zmk,display = &oled; */
-        /* zephyr,display = &oled; */
     };
-
 
     vbatt: vbatt {
 	    compatible = "zmk,battery-nrf-vddh";
@@ -45,42 +42,9 @@
     };
 };
 
-/* &pinctrl { */
-/*     i2c0_default: i2c0_default { */
-/*         group1 { */
-/*             psels = <NRF_PSEL(TWIM_SDA, 1, 11)>,  // P1.11 (D15) */
-/*                     <NRF_PSEL(TWIM_SCL, 1, 13)>;  // P1.13 (D18) */
-/*         }; */
-/*     }; */
-/**/
-/*     i2c0_sleep: i2c0_sleep { */
-/*         group1 { */
-/*             psels = <NRF_PSEL(TWIM_SDA, 1, 11)>, */
-/*                     <NRF_PSEL(TWIM_SCL, 1, 13)>; */
-/*             low-power-enable; */
-/*         }; */
-/*     }; */
-/* }; */
-/**/
-/* &pro_micro_i2c { */
-/*     status = "okay"; */
-/*     pinctrl-0 = <&i2c0_default>; */
-/*     pinctrl-1 = <&i2c0_sleep>; */
-/*     pinctrl-names = "default", "sleep"; */
-/**/
-/*     oled: ssd1306@3c { */
-/*         compatible = "solomon,ssd1306fb"; */
-/*         reg = <0x3c>; */
-/*         width = <128>; */
-/*         height = <32>; */
-/*         segment-offset = <0>; */
-/*         page-offset = <0>; */
-/*         display-offset = <0>; */
-/*         multiplex-ratio = <31>; */
-/*         segment-remap; */
-/*         com-invdir; */
-/*         com-sequential; */
-/*         inversion-on; */
-/*         prechargep = <0x22>; */
-/*     }; */
-/* }; */
+/ {
+  nice_view_display {
+    compatible = "zmk,nice-view";
+    display = <&nice_view>;
+  }
+};
