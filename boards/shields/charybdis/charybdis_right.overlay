@@ -101,11 +101,11 @@
     reg = <0x3c>;
     label = "NiceView";
     width = <128>;
-    height = <32>;
+    height = <64>;
     segment-offset = <0>;        /* default safe value */
     page-offset = <0>;           /* default safe value */
     display-offset = <0>;        /* vertical shift */
-    multiplex-ratio = <31>;      /* (height - 1) */
+    multiplex-ratio = <63>;      /* (height - 1) */
     reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; /*  optional, change if wired */
     prechargep = <34>;
   };
