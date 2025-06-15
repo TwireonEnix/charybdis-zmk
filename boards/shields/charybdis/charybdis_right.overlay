@@ -102,12 +102,13 @@
     label = "NiceView";
     width = <128>;
     height = <32>;
-    segment-offset = <10>;        /* default safe value */
+    segment-offset = <32>;        /* default safe value */
     page-offset = <0>;           /* default safe value */
     display-offset = <0>;        /* vertical shift */
     multiplex-ratio = <31>;      /* (height - 1) */
     segment-remap;
     com-invdir;
+
     reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; /*  optional, change if wired */
     prechargep = <34>;
   };
