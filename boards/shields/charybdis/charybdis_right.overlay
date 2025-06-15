@@ -107,7 +107,6 @@
     display-offset = <0>;        /* vertical shift */
     multiplex-ratio = <31>;      /* (height - 1) */
     reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; /*  optional, change if wired */
-    power-supply = <&vbatt>;  
     prechargep = <34>;
   };
 };
