@@ -112,6 +112,7 @@
         compatible = "zmk,keymap";
 
         win {
+           label = "WIN";
             bindings = <
 &kp LG(TAB)       &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &tapKpHoldToMac 1 SLASH  &kp LA(SPACE)
 &kp RIGHT_ALT     &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A          &kp SINGLE_QUOTE
@@ -121,6 +122,7 @@
         };
 
         mac {
+            label = "MAC";
             bindings = <
 &kp LC(UP_ARROW)  &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z         &kp F              &kp O            &kp U            &tapKpHoldToWin 0 SLASH  &kp LG(SPACE)
 &kp RIGHT_ALT     &hml LEFT_CONTROL C  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_GUI E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL A      &kp SINGLE_QUOTE
@@ -130,6 +132,7 @@
         };
 
         num-win {
+          label = "NUMB";
             bindings = <
 &none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &kp PLUS         &kp F12     &kp F7              &kp F8                &kp F9            &kp SLASH     &none
 &kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
@@ -139,6 +142,7 @@
         };
 
         nav-win {
+            label = "NAV";
             bindings = <
 &none     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP  &none             &none               &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
 &kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT        &kp LG(LS(S))     &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp LG(RIGHT)
@@ -148,6 +152,7 @@
         };
 
         num-mac {
+            label = "NUMB";
             bindings = <
 &none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &kp PLUS         &kp F12     &kp F7              &kp F8            &kp F9            &kp SLASH         &none
 &kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_GUI F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
@@ -157,6 +162,7 @@
         };
 
         nav-mac {
+            label = "NAV";
             bindings = <
 &none                 &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
 &none                 &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT        &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none
@@ -166,6 +172,7 @@
         };
 
         symbols {
+            label = "SYMB";
             bindings = <
 &none                              &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp PIPE   &kp AMPERSAND   &kp PERCENT       &kp CARET   &upDirectory       &none
 &kp RA(SLASH)                      &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
@@ -175,14 +182,13 @@
         };
 
         Mouse {
+          label = "MOUSE";
             bindings = <
 &trans  &trans  &trans     &msc SCRL_UP     &msc SCRL_DOWN     &trans    &trans  &trans     &msc SCRL_DOWN  &msc SCRL_UP  &trans    &trans
 &trans  &msc SCRL_RIGHT  &mkp MCLK  &mkp RCLK  &mkp LCLK  &msc SCRL_LEFT    &msc SCRL_LEFT     &mkp LCLK       &mkp RCLK     &mkp MCLK &msc SCRL_RIGHT  &trans
 &trans  &trans  &trans     &mkp MB4   &mkp MB5   &trans    &trans  &mkp MB5   &mkp MB4        &trans        &trans    &trans
                            &trans     &trans    &trans    &trans  &trans
             >;
-
-            label = "Mouse";
         };
     };
 };
