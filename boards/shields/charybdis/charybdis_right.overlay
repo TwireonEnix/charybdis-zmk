@@ -101,11 +101,11 @@
     reg = <0x3c>;
     label = "NiceView";
     width = <128>;
-    height = <60>;
+    height = <64>;
     segment-offset = <0>;        /* default safe value */
     page-offset = <0>;           /* default safe value */
     display-offset = <0>;        /* vertical shift */
-    multiplex-ratio = <59>;      /* (height - 1) */
+    multiplex-ratio= <63>;      /* (height - 1) */
     segment-remap;
     com-invdir;
 
