@@ -108,7 +108,7 @@
     multiplex-ratio= <63>;      /* (height - 1) */
     segment-remap;
     com-invdir;
-
+    inversion-on;/* 1 = enabled, 0 = disabled */
     reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; /*  optional, change if wired */
     prechargep = <34>;
   };
