@@ -43,9 +43,9 @@
     };
 };
 
-/ {
-  nice_view_display {
-    compatible = "zmk,nice-view";
-    display = <&nice_view>;
-  };
-};
+/* / { */
+/*   nice_view_display { */
+/*     compatible = "zmk,nice-view"; */
+/*     display = <&nice_view>; */
+/*   }; */
+/* }; */
