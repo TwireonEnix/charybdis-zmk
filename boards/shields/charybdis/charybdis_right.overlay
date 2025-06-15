@@ -97,11 +97,11 @@
   clock-frequency = <I2C_BITRATE_STANDARD>;
 
   nice_view: ssd1306@3c {
-    compatible = "solomon,ssd1306fb";
+    compatible = "solomon,ssd1306fb-i2c";
     reg = <0x3C>;
     label = "NiceView";
     width = <128>;
-    height = <32>;
+    height = <32>;  
     segment-offset = <0>;        /* default safe value */
     page-offset = <0>;           /* default safe value */
     display-offset = <0>;        /* vertical shift */
