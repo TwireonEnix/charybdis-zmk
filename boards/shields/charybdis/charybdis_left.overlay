@@ -37,34 +37,11 @@
     };
 };
 
-/* &i2c1 { */
-/*   compatible = "nordic,nrf-twi"; */
-/*   status = "okay"; */
-/*   pinctrl-0 = <&i2c1_default>; */
-/*   pinctrl-1 = <&i2c1_sleep>; */
-/*   pinctrl-names = "default", "sleep"; */
-/*   clock-frequency = <I2C_BITRATE_STANDARD>; */
-/**/
-/*   nice_view: ssd1306@3c { */
-/*     compatible = "solomon,ssd1306fb"; */
-/*     reg = <0x3c>; */
-/*     label = "NiceView"; */
-/*     width = <128>; */
-/*     height = <64>; */
-/*     segment-offset = <0>; */
-/*     page-offset = <0>;   */
-/*     display-offset = <0>; */
-/*     multiplex-ratio = <31>; */
-/*     inversion-on; */
-/*     reset-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; */
-/*     prechargep = <0x22>; */
-/*  }; */
-/* }; */
-
 &pro_micro_i2c {
     status = "okay";
     pinctrl-0 = <&i2c1_default>;
     pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
 
     nice_view: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
