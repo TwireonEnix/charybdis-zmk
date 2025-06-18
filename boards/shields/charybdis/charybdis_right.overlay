@@ -99,7 +99,7 @@
   nice_view: ssd1306@3c {
     compatible = "solomon,ssd1306fb";
     reg = <0x3c>;
-    label = "NiceView";
+    label = "DISPLAY";
     width = <128>;
     height = <64>;  
     segment-offset = <0>;        /* default safe value */
