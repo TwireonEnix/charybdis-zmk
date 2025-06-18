@@ -198,7 +198,7 @@
         Mouse {
           label = "MOUSE";
             bindings = <
-&tog_on &trans           &trans     &msc SCRL_UP   &msc SCRL_DOWN  &trans            &trans  &trans  &trans  &trans  &trans    &tog_off
+&tog_on 7 &trans           &trans     &msc SCRL_UP   &msc SCRL_DOWN  &trans            &trans  &trans  &trans  &trans  &trans    &tog_off 7
 &trans  &msc SCRL_RIGHT  &mkp MCLK  &mkp RCLK      &mkp LCLK       &msc SCRL_LEFT    &trans  &kp LSHFT  &kp LEFT_GUI  &kp LALT &kp LEFT_CONTROL  &trans
 &trans  &trans           &trans     &mkp MB4       &mkp MB5        &trans            &trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &trans
                            &trans     &trans    &trans    &trans  &trans
