@@ -70,19 +70,6 @@
             flavor = "tap-preferred";
         };
 
-        tog_on: toggle_layer_on_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer On";
-            toggle-mode = "on";
-        };
-
-        tog_off: toggle_layer_off_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
-        };
     };
 
     macros {
@@ -198,7 +185,7 @@
         Mouse {
           label = "MOUSE";
             bindings = <
-&tog_on 7 &trans           &trans     &msc SCRL_UP   &msc SCRL_DOWN  &trans            &trans  &trans  &trans  &trans  &trans    &tog_off 7
+&to 7 &trans           &trans     &msc SCRL_UP   &msc SCRL_DOWN  &trans            &trans  &trans  &trans  &trans  &trans    &to 1
 &trans  &msc SCRL_RIGHT  &mkp MCLK  &mkp RCLK      &mkp LCLK       &msc SCRL_LEFT    &trans  &kp LSHFT  &kp LEFT_GUI  &kp LALT &kp LEFT_CONTROL  &trans
 &trans  &trans           &trans     &mkp MB4       &mkp MB5        &trans            &trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &trans
                            &trans     &trans    &trans    &trans  &trans
