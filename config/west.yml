@@ -14,7 +14,7 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: inorichi
       revision: main
-    - name: zmk-nice-oled
+    - name: zmk-oled-adapter
       remote: mctechnology17
       revision: main
   self:
