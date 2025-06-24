@@ -22,7 +22,6 @@ if SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT
     select LV_USE_LABEL
     select LV_USE_IMG
 
-
     config I2C
       default y
 
@@ -42,9 +41,9 @@ if SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT
     config LV_Z_BITS_PER_PIXEL
       default 1
 
-    # choice LV_COLOR_DEPTH
-    #   default LV_COLOR_DEPTH_1
-    # endchoice
+    choice LV_COLOR_DEPTH
+      default LV_COLOR_DEPTH_1
+    endchoice
 
   endif # LVGL
 
