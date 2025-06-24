@@ -21,7 +21,7 @@ if SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT
     config SSD1306
       default y
 
-  endif # ZMK_DISPLAY
+  endif
 
   # if LVGL
   #
