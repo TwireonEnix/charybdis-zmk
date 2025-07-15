@@ -58,7 +58,7 @@
             bindings = <&toMac>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <280>;
             flavor = "tap-preferred";
         };
 
@@ -68,7 +68,7 @@
             bindings = <&toWin>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <280>;
             flavor = "tap-preferred";
         };
 
@@ -78,17 +78,7 @@
             bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-        };
-
-        holdToClear: holdToClear {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLDTOCLEAR";
-            bindings = <&bt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <280>;
             flavor = "tap-preferred";
         };
     };
@@ -199,7 +189,7 @@
         Mouse {
             label = "MOUSE";
             bindings = <
-&to 1   &trans           &trans     &trans        &trans          &trans            &trans  &trans          &trans          &trans        &trans            &holdToClear BT_CLR_ALL ESCAPE
+&to 1   &trans           &trans     &trans        &trans          &trans            &trans  &trans          &trans          &trans        &trans            &bt BT_CLR_ALL
 &trans  &trans           &mkp MCLK  &mkp RCLK     &mkp LCLK       &trans            &trans  &kp LSHFT       &kp LEFT_GUI    &kp LALT      &kp LEFT_CONTROL  &trans
 &trans  &trans           &trans     &mkp MB4      &mkp MB5        &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &bt BT_NXT
                                     &trans        &trans          &trans            &trans  &trans
