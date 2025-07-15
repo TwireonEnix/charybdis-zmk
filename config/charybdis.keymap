@@ -58,7 +58,7 @@
             bindings = <&toMac>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
 
@@ -68,7 +68,7 @@
             bindings = <&toWin>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
 
@@ -78,7 +78,7 @@
             bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
 
@@ -88,19 +88,12 @@
             bindings = <&bt>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
     };
 
     macros {
-        addSurrounds: addSurrounds {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Y &kp Z &kp I &kp W>;
-            label = "ADDSURROUNDS";
-        };
-
         jsfn: jsfn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -196,7 +189,7 @@
         symbols {
             label = "SYMB";
             bindings = <
-&none                              &addSurrounds                &kp AT                  &kp UNDER                       &kp EQUAL                          &kp PLUS         &kp PIPE   &kp AMPERSAND               &kp PERCENT                &kp CARET             &upDirectory                     &none
+&none                              &none                        &kp AT                  &kp UNDER                       &kp EQUAL                          &kp PLUS         &kp PIPE   &kp AMPERSAND               &kp PERCENT                &kp CARET             &upDirectory                     &none
 &kp RA(SLASH)                      &hml LEFT_CONTROL BACKSLASH  &hml LEFT_ALT QUESTION  &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_GUI RIGHT_BRACE  &hmr LEFT_ALT DOLLAR  &hmr LEFT_CONTROL DOUBLE_QUOTES  &none
 &mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE                    &kp EXCLAMATION         &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp STAR         &kp HASH   &kp LESS_THAN               &kp GREATER_THAN           &kp SEMI              &kp RA(N5)                       &none
                                                                                         &jsfn                           &kp SPACE                          &kp BACKSPACE    &trans     &kp ENTER
