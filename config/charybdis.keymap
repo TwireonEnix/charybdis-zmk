@@ -58,7 +58,7 @@
             bindings = <&toMac>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <500>;
             flavor = "tap-preferred";
         };
 
@@ -68,7 +68,7 @@
             bindings = <&toWin>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <500>;
             flavor = "tap-preferred";
         };
 
@@ -78,7 +78,17 @@
             bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <500>;
+            flavor = "tap-preferred";
+        };
+
+        holdToClear: holdToClear {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTOCLEAR";
+            bindings = <&bt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
             flavor = "tap-preferred";
         };
     };
@@ -129,7 +139,7 @@
 &kp LC(UP_ARROW)  &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z         &kp F              &kp O            &kp U            &tapKpHoldToWin 0 SLASH  &kp LG(SPACE)
 &kp RIGHT_ALT     &hml LEFT_CONTROL C  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_GUI E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL A      &kp SINGLE_QUOTE
 &kp ENTER         &kp W                &kp J            &mt LG(C) V      &mt LG(V) D        &kp K            &kp X         &kp H              &kp COLON        &kp COMMA        &kp PERIOD               &mt LG(Q) DELETE
-                                                        &lt 5 TAB        &lt 7 SPACE        &kp BACKSPACE    &lt 4 ESCAPE  &lt 6 ENTER
+                                                        &lt 3 TAB        &lt 7 SPACE        &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER
             >;
         };
 
@@ -139,66 +149,66 @@
 &kp LG(TAB)             &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &tapKpHoldToMac 1 SLASH  &kp LA(SPACE)
 &kp RIGHT_ALT           &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A          &kp SINGLE_QUOTE
 &toLayerModTap 7 ENTER  &kp W            &kp J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD               &mt LA(F4) DELETE
-                                                          &lt 3 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 3 ESCAPE  &lt 6 ENTER
-            >;
-        };
-
-        num-win {
-            label = "NUMB";
-            bindings = <
-&none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &kp PLUS         &kp F12     &kp F7              &kp F8                &kp F9            &kp SLASH     &none
-&kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
-&none     &kp COMMA     &kp NUMBER_1            &kp NUMBER_2                &kp NUMBER_3              &kp STAR         &kp F10     &kp F1              &kp F2                &kp F3            &kp DOT       &kp DELETE
-                                                &kp TAB                     &kp NUMBER_0              &kp BACKSPACE    &kp ESCAPE  &kp ENTER
-            >;
-        };
-
-        nav-win {
-            label = "NAV";
-            bindings = <
-&none     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &none             &none               &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
-&kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT         &kp LG(LS(S))     &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp LG(RIGHT)
-&none     &none               &kp C_PREVIOUS       &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &kp LS(TAB)       &none               &none           &kp HOME        &kp END       &none      &toMac
-                                                   &trans            &none             &bt BT_CLR_ALL    &caps_word          &kp ENTER
+                                                          &lt 6 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 5 ESCAPE  &lt 6 ENTER
             >;
         };
 
         num-mac {
             label = "NUMB_M";
             bindings = <
-&none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &kp PLUS         &kp F12     &kp F7              &kp F8            &kp F9            &kp SLASH         &none
-&kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_GUI F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
-&none     &kp COMMA         &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3              &kp ASTRK        &kp F10     &kp F1              &kp F2            &kp F3            &kp PERIOD        &kp DELETE
-                                                    &kp TAB                 &kp NUMBER_0              &kp BACKSPACE    &kp ESCAPE  &kp ENTER
+&none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &none            &kp F12     &kp F7              &kp F8            &kp F9            &none             &none
+&kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_GUI F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
+&none     &kp COMMA         &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3              &none            &kp F10     &kp F1              &kp F2            &kp F3            &kp PERIOD        &kp DELETE
+                                                    &kp SPACE               &kp NUMBER_0              &kp BACKSPACE    &kp ESCAPE  &kp ENTER
             >;
         };
 
         nav-mac {
             label = "NAV_M";
             bindings = <
-&none                 &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
-&none                 &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT         &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS       &kp C_PLAY_PAUSE   &kp C_AC_FORWARD  &trans                      &trans      &trans          &kp HOME        &kp END       &none      &toWin
-                                                                 &trans             &none             &bt BT_CLR_ALL              &caps_word  &trans
+&none                 &none                 &none           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &none                       &none       &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
+&none                 &kp LEFT_CONTROL      &kp LALT        &kp LEFT_GUI       &kp LSHFT         &kp LS(LC(LG(NUMBER_4)))    &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_AC_FORWARD  &none                       &none       &none           &kp HOME        &kp END       &none      &toWin
+                                                            &trans             &none             &none                       &caps_word  &kp ENTER
+            >;
+        };
+
+        num-win {
+            label = "NUMB";
+            bindings = <
+&none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &none            &kp F12     &kp F7              &kp F8                &kp F9            &none         &none
+&kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
+&none     &kp COMMA     &kp NUMBER_1            &kp NUMBER_2                &kp NUMBER_3              &none            &kp F10     &kp F1              &kp F2                &kp F3            &kp DOT       &kp DELETE
+                                                &kp SPACE                   &kp NUMBER_0              &kp BACKSPACE    &kp ESCAPE  &kp ENTER
+            >;
+        };
+
+        nav-win {
+            label = "NAV";
+            bindings = <
+&none     &none         &none           &kp C_VOL_DN      &kp C_VOLUME_UP   &none            &none               &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
+&kp RALT  &kp LEFT_GUI  &kp LALT        &kp LCTRL         &kp LSHFT         &kp LG(LS(S))    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp LG(RIGHT)
+&none     &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &kp LS(TAB)      &none               &none           &kp HOME        &kp END       &none      &toMac
+                                        &trans            &none             &none            &caps_word          &kp ENTER
             >;
         };
 
         symbols {
             label = "SYMB";
             bindings = <
-&none                              &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp PIPE   &kp AMPERSAND   &kp PERCENT       &kp CARET   &upDirectory       &none
-&kp RA(SLASH)                      &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
-&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &kp HASH   &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp RA(N5)         &bt BT_NXT
-                                                                   &jsfn                 &kp SPACE              &kp BACKSPACE    &trans     &kp ENTER
+&none                              &addSurrounds                &kp AT                  &kp UNDER                       &kp EQUAL                          &kp PLUS         &kp PIPE   &kp AMPERSAND               &kp PERCENT                &kp CARET             &upDirectory                     &none
+&kp RA(SLASH)                      &hml LEFT_CONTROL BACKSLASH  &hml LEFT_ALT QUESTION  &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_GUI RIGHT_BRACE  &hmr LEFT_ALT DOLLAR  &hmr LEFT_CONTROL DOUBLE_QUOTES  &none
+&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE                    &kp EXCLAMATION         &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp STAR         &kp HASH   &kp LESS_THAN               &kp GREATER_THAN           &kp SEMI              &kp RA(N5)                       &none
+                                                                                        &jsfn                           &kp SPACE                          &kp BACKSPACE    &trans     &kp ENTER
             >;
         };
 
         Mouse {
             label = "MOUSE";
             bindings = <
-&to 2   &trans           &trans     &msc SCRL_UP  &msc SCRL_DOWN  &trans            &trans  &trans          &trans          &trans        &trans            &trans
-&trans  &msc SCRL_RIGHT  &mkp MCLK  &mkp RCLK     &mkp LCLK       &msc SCRL_LEFT    &trans  &kp LSHFT       &kp LEFT_GUI    &kp LALT      &kp LEFT_CONTROL  &trans
-&trans  &trans           &trans     &mkp MB4      &mkp MB5        &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &trans
+&to 1   &trans           &trans     &trans        &trans          &trans            &trans  &trans          &trans          &trans        &trans            &holdToClear BT_CLR_ALL ESCAPE
+&trans  &trans           &mkp MCLK  &mkp RCLK     &mkp LCLK       &trans            &trans  &kp LSHFT       &kp LEFT_GUI    &kp LALT      &kp LEFT_CONTROL  &trans
+&trans  &trans           &trans     &mkp MB4      &mkp MB5        &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &bt BT_NXT
                                     &trans        &trans          &trans            &trans  &trans
             >;
         };
