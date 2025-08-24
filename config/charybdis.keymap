@@ -26,10 +26,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT_HAND";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <150>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-on-release;
@@ -81,6 +81,19 @@
             tapping-term-ms = <500>;
             flavor = "tap-preferred";
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-on-release;
+        };
     };
 
     macros {
@@ -101,30 +114,20 @@
         toWin: toWin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &to 0>;
+            bindings = <&bt BT_SEL 0 &to 1>;
             label = "TOWIN";
         };
 
         toMac: toMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 1>;
+            bindings = <&bt BT_SEL 1 &to 0>;
             label = "TOMAC";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
-
-        win {
-            label = "WIN";
-            bindings = <
-&kp LG(TAB)             &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &tapKpHoldToMac 1 SLASH  &kp LA(SPACE)
-&kp RIGHT_ALT           &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A          &kp SINGLE_QUOTE
-&toLayerModTap 7 ENTER  &kp W            &kp J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD               &mt LA(F4) DELETE
-                                                          &lt 5 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 4 ESCAPE  &lt 6 ENTER
-            >;
-        };
 
         mac {
             label = "MAC";
@@ -133,6 +136,16 @@
 &kp RIGHT_ALT     &hml LEFT_CONTROL C  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_GUI E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL A      &kp SINGLE_QUOTE
 &kp ENTER         &kp W                &kp J            &mt LG(C) V      &mt LG(V) D        &kp K            &kp X         &kp H              &kp COLON        &kp COMMA        &kp PERIOD               &mt LG(Q) DELETE
                                                         &lt 3 TAB        &lt 7 SPACE        &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER
+            >;
+        };
+
+        win {
+            label = "WIN";
+            bindings = <
+&kp LG(TAB)             &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &tapKpHoldToMac 1 SLASH  &kp LA(SPACE)
+&kp RIGHT_ALT           &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A          &kp SINGLE_QUOTE
+&toLayerModTap 7 ENTER  &kp W            &kp J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD               &mt LA(F4) DELETE
+                                                          &lt 5 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 4 ESCAPE  &lt 6 ENTER
             >;
         };
 
@@ -179,9 +192,9 @@
         symbols {
             label = "SYMB";
             bindings = <
-&none                              &kp RA(SLASH)            &kp GRAVE               &kp UNDER                       &kp PLUS                           &kp PIPE         &kp AT     &kp AMPERSAND               &kp PERCENT                &kp CARET             &upDirectory                     &none
-&jsfn                              &hml LEFT_CONTROL TILDE  &hml LEFT_ALT QUESTION  &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp MINUS        &kp EQUAL  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_GUI RIGHT_BRACE  &hmr LEFT_ALT DOLLAR  &hmr LEFT_CONTROL DOUBLE_QUOTES  &none
-&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp BACKSLASH            &kp EXCLAMATION         &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp STAR         &kp HASH   &kp LESS_THAN               &kp GREATER_THAN           &kp SEMI              &kp RA(N5)                       &none
+&none                              &kp RA(SLASH)            &kp ASTRK               &kp MINUS                       &kp PLUS                           &kp AT           &kp PIPE   &kp AMPERSAND               &kp PERCENT                &kp CARET             &upDirectory                     &none
+&jsfn                              &hml LEFT_CONTROL TILDE  &hml LEFT_ALT QUESTION  &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp EQUAL        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_GUI RIGHT_BRACE  &hmr LEFT_ALT DOLLAR  &hmr LEFT_CONTROL DOUBLE_QUOTES  &none
+&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp BACKSLASH            &kp EXCLAMATION         &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp UNDER        &kp HASH   &kp LESS_THAN               &kp GREATER_THAN           &kp SEMI              &kp RA(N5)                       &none
                                                                                     &kp TAB                         &kp SPACE                          &kp BACKSPACE    &trans     &kp ENTER
             >;
         };
@@ -189,7 +202,7 @@
         Mouse {
             label = "MOUSE";
             bindings = <
-&to 0   &trans           &trans     &msc SCRL_UP  &msc SCRL_DOWN  &trans            &trans  &trans          &trans          &trans        &trans            &bt BT_CLR_ALL
+&to 1   &trans           &trans     &msc SCRL_UP  &msc SCRL_DOWN  &trans            &trans  &trans          &trans          &trans        &trans            &bt BT_CLR_ALL
 &trans  &msc SCRL_RIGHT  &mkp MCLK  &mkp RCLK     &mkp LCLK       &msc SCRL_LEFT    &trans  &kp LSHFT       &kp LEFT_GUI    &kp LALT      &kp LEFT_CONTROL  &trans
 &trans  &trans           &trans     &mkp MB4      &mkp MB5        &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &bt BT_NXT
                                     &trans        &trans          &trans            &trans  &trans
