@@ -1,48 +1,6 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  win:
-  - Gui+$$mdi:keyboard-tab$$
-  - Q
-  - L
-  - Y
-  - P
-  - B
-  - Z
-  - F
-  - O
-  - U
-  - {t: /, h: '&toMac 1'}
-  - Alt+$$mdi:keyboard-space$$
-  - RIGHT ALT
-  - {t: C, h: LEFT GUI}
-  - {t: R, h: LEFT ALT}
-  - {t: S, h: LEFT CONTROL}
-  - {t: T, h: LEFT SHIFT}
-  - G
-  - M
-  - {t: N, h: LEFT SHIFT}
-  - {t: E, h: LEFT CONTROL}
-  - {t: I, h: LEFT ALT}
-  - {t: A, h: LEFT GUI}
-  - ''''
-  - {t: ESCAPE, h: '$$mdi:keyboard-return$$'}
-  - W
-  - J
-  - {t: V, h: Ctl+C}
-  - {t: D, h: Ctl+V}
-  - K
-  - X
-  - H
-  - ':'
-  - ','
-  - .
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Alt+F4}
-  - {t: '$$mdi:keyboard-tab$$', h: nav-win}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ESCAPE, h: num-win}
-  - {t: '$$mdi:keyboard-return$$', h: symbols}
-  mac:
+  MAC:
   - Ctl+UP ARROW
   - Q
   - L
@@ -67,7 +25,7 @@ layers:
   - {t: I, h: LEFT ALT}
   - {t: A, h: LEFT CONTROL}
   - ''''
-  - {t: ESCAPE, h: '$$mdi:keyboard-return$$'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - W
   - J
   - {t: V, h: Gui+C}
@@ -79,30 +37,156 @@ layers:
   - ','
   - .
   - {t: '$$mdi:backspace-reverse-outline$$', h: Gui+Q}
-  - {t: '$$mdi:keyboard-tab$$', h: nav-mac}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-tab$$', h: NAV_M}
+  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ESCAPE, h: num-mac}
-  - {t: '$$mdi:keyboard-return$$', h: symbols}
-  num-win:
+  - {t: ESCAPE, h: NUMB_M}
+  - {t: '$$mdi:keyboard-return$$', h: SYMB}
+  WIN:
+  - Gui+$$mdi:keyboard-tab$$
+  - Q
+  - L
+  - Y
+  - P
+  - B
+  - Z
+  - F
+  - O
+  - U
+  - {t: /, h: '&toMac 1'}
+  - Alt+$$mdi:keyboard-space$$
+  - RIGHT ALT
+  - {t: C, h: LEFT GUI}
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: LEFT CONTROL}
+  - {t: T, h: LEFT SHIFT}
+  - G
+  - M
+  - {t: N, h: LEFT SHIFT}
+  - {t: E, h: LEFT CONTROL}
+  - {t: I, h: LEFT ALT}
+  - {t: A, h: LEFT GUI}
+  - ''''
+  - {t: '$$mdi:keyboard-return$$', h: MOUSE}
+  - W
+  - J
+  - {t: V, h: Ctl+C}
+  - {t: D, h: Ctl+V}
+  - K
+  - X
+  - H
+  - ':'
+  - ','
+  - .
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Alt+F4}
+  - {t: '$$mdi:keyboard-tab$$', h: NAV}
+  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: ESCAPE, h: NUMB}
+  - {t: '$$mdi:keyboard-return$$', h: SYMB}
+  NUMB_M:
   - ''
   - ''
   - '7'
   - '8'
   - '9'
-  - +
+  - ''
   - F12
   - F7
   - F8
   - F9
-  - /
+  - ''
+  - ''
+  - $$mdi:apple-keyboard-option$$
+  - LEFT CONTROL
+  - {t: '4', h: LEFT ALT}
+  - {t: '5', h: LEFT GUI}
+  - {t: '6', h: LEFT SHIFT}
+  - ''
+  - F11
+  - {t: F4, h: LEFT SHIFT}
+  - {t: F5, h: LEFT GUI}
+  - {t: F6, h: LEFT ALT}
+  - LEFT CONTROL
+  - $$mdi:apple-keyboard-option$$
+  - ''
+  - ','
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - F10
+  - F1
+  - F2
+  - F3
+  - .
+  - $$mdi:backspace-reverse-outline$$
+  - $$mdi:keyboard-space$$
+  - '0'
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: ESCAPE, type: held}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  NAV_M:
+  - ''
+  - Gui+$$mdi:arrow-left-bold$$
+  - Gui+$$mdi:arrow-right-bold$$
+  - VOLUME DOWN
+  - VOLUME UP
+  - ''
+  - Alt+Ctl+Gui+$$mdi:arrow-left-bold$$
+  - INSERT
+  - PAGE DOWN
+  - PAGE UP
+  - Ctl+Alt+C
+  - Alt+Ctl+Gui+$$mdi:arrow-right-bold$$
+  - ''
+  - LEFT CONTROL
+  - $$mdi:apple-keyboard-option$$
+  - LEFT GUI
+  - $$mdi:apple-keyboard-shift$$
+  - Sft+Ctl+Gui+4
+  - Alt+Ctl+$$mdi:arrow-left-bold$$
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - $$mdi:arrow-right-bold$$
+  - Ctl+Alt+$$mdi:arrow-right-bold$$
+  - BRIGHTNESS DEC
+  - BRIGHTNESS INC
+  - PREVIOUS
+  - PLAY PAUSE
+  - AC FORWARD
+  - ''
+  - ''
+  - {t: 'Ctl+Alt+$$mdi:keyboard-return$$', type: enter}
+  - HOME
+  - END
+  - {t: 'Alt+Ctl+$$mdi:backspace$$', type: backspace}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - ''
+  - '&caps_word'
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  NUMB:
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - ''
+  - F12
+  - F7
+  - F8
+  - F9
+  - ''
   - ''
   - $$mdi:apple-keyboard-option$$
   - LEFT GUI
   - {t: '4', h: LEFT ALT}
   - {t: '5', h: LEFT CONTROL}
   - {t: '6', h: LEFT SHIFT}
-  - '-'
+  - ''
   - F11
   - {t: F4, h: LEFT SHIFT}
   - {t: F5, h: LEFT CONTROL}
@@ -114,31 +198,31 @@ layers:
   - '1'
   - '2'
   - '3'
-  - '*'
+  - ''
   - F10
   - F1
   - F2
   - F3
   - .
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-space$$
   - '0'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ESCAPE, type: held}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  nav-win:
+  NAV:
   - ''
-  - Alt+LEFT ARROW
-  - Alt+RIGHT ARROW
+  - Gui+LEFT ARROW
+  - Gui+$$mdi:arrow-right-bold$$
   - $$mdi:volume-low$$
   - VOLUME UP
   - ''
-  - ''
+  - Gui+Sft+LEFT ARROW
   - INSERT
   - PAGE DOWN
   - PAGE UP
   - ''
-  - ''
+  - Gui+Sft+$$mdi:arrow-right-bold$$
   - $$mdi:apple-keyboard-option$$
   - LEFT GUI
   - $$mdi:apple-keyboard-option$$
@@ -155,169 +239,85 @@ layers:
   - ''
   - PREVIOUS
   - PLAY PAUSE
-  - FORWARD
+  - AC FORWARD
   - $$mdi:keyboard-tab-reverse$$
   - ''
-  - ''
+  - Gui+UP ARROW
   - HOME
   - END
-  - ''
-  - '&toMac'
+  - Gui+Sft+DOWN ARROW
+  - {t: ▽, type: trans}
   - {type: held}
   - ''
-  - $$mdi:bluetooth-off$$
+  - ''
   - '&caps_word'
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  num-mac:
+  SYMB:
   - ''
-  - ''
-  - '7'
-  - '8'
-  - '9'
-  - +
-  - F12
-  - F7
-  - F8
-  - F9
-  - /
-  - ''
-  - $$mdi:apple-keyboard-option$$
-  - LEFT CONTROL
-  - {t: '4', h: LEFT ALT}
-  - {t: '5', h: LEFT GUI}
-  - {t: '6', h: LEFT SHIFT}
-  - '-'
-  - F11
-  - {t: F4, h: LEFT SHIFT}
-  - {t: F5, h: LEFT GUI}
-  - {t: F6, h: LEFT ALT}
-  - LEFT CONTROL
-  - $$mdi:apple-keyboard-option$$
-  - ''
-  - ','
-  - '1'
-  - '2'
-  - '3'
+  - AltGr+/
   - '*'
-  - F10
-  - F1
-  - F2
-  - F3
-  - .
-  - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-tab$$
-  - '0'
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ESCAPE, type: held}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  nav-mac:
-  - ''
-  - Alt+$$mdi:arrow-left-bold$$
-  - Alt+RIGHT ARROW
-  - VOLUME DOWN
-  - VOLUME UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - INSERT
-  - PAGE DOWN
-  - PAGE UP
-  - ''
-  - ''
-  - ''
-  - LEFT CONTROL
-  - $$mdi:apple-keyboard-option$$
-  - LEFT GUI
-  - $$mdi:apple-keyboard-shift$$
-  - Sft+Ctl+Gui+4
-  - {t: ▽, type: trans}
-  - LEFT ARROW
-  - DOWN ARROW
-  - UP ARROW
-  - $$mdi:arrow-right-bold$$
-  - ''
-  - BRIGHTNESS DEC
-  - BRIGHTNESS INC
-  - PREVIOUS
-  - PLAY PAUSE
-  - FORWARD
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - HOME
-  - END
-  - ''
-  - '&toWin'
-  - {type: held}
-  - ''
-  - $$mdi:bluetooth-off$$
-  - '&caps_word'
-  - {t: ▽, type: trans}
-  symbols:
-  - ''
-  - '&addSurrounds'
-  - '@'
-  - _
-  - '='
+  - '-'
   - +
+  - '@'
   - '|'
   - '&'
   - '%'
   - ^
   - '&upDirectory'
   - ''
-  - AltGr+/
-  - \
-  - '?'
-  - (
-  - )
-  - '-'
+  - '&jsfn'
+  - {t: '~', h: LEFT CONTROL}
+  - {t: '?', h: LEFT ALT}
+  - {t: (, h: LEFT GUI}
+  - {t: ), h: LEFT SHIFT}
+  - '='
   - '`'
-  - '{'
-  - '}'
-  - $
-  - '"'
+  - {t: '{', h: LEFT SHIFT}
+  - {t: '}', h: LEFT GUI}
+  - {t: $, h: LEFT ALT}
+  - {t: '"', h: LEFT CONTROL}
   - ''
   - {t: AltGr+1, h: AltGr+Sft+1}
-  - '~'
+  - \
   - '!'
   - '['
   - ']'
-  - '*'
+  - _
   - '#'
   - <
   - '>'
   - ;
   - AltGr+5
-  - BT NXT
-  - '&jsfn'
+  - ''
+  - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', type: held}
-  Mouse:
+  MOUSE:
+  - {t: WIN, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&msc SCRL_UP'
+  - '&msc SCRL_DOWN'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - $$mdi:bluetooth-off$$
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&msc SCRL_RIGHT'
   - '&mkp MCLK'
   - '&mkp RCLK'
   - '&mkp LCLK'
+  - '&msc SCRL_LEFT'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - LEFT GUI
+  - $$mdi:apple-keyboard-option$$
+  - LEFT CONTROL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -326,13 +326,13 @@ layers:
   - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT ARROW
+  - BT NXT
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
