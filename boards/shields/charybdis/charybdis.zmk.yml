@@ -1,15 +1,13 @@
-file_format: "1"
+file_format: '1'
 
 id: charybdis
 name: Charybdis
 type: shield
 url: https://github.com/Bastardkb/Charybdis/
 requires: [pro_micro]
-exposes: [i2c_oled]
 features:
   - keys
   - pointer
-  - display
 siblings:
   - charybdis_left
   - charybdis_right
