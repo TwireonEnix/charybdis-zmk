@@ -187,9 +187,9 @@
             display-name = "WIN";
             bindings = <
 &kp LG(TAB)             &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &kp SLASH             &kp LA(SPACE)
-&kp RIGHT_ALT          &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A          &kp SINGLE_QUOTE
-&toLayerModTap 7 ENTER  &kp W            &kp J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD               &mt LA(F4) DELETE
-                                                          &lt 5 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 4 ESCAPE  &lt 6 ENTER
+&kp RIGHT_ALT          &hm_c LEFT_GUI C  &hm_r LEFT_ALT R  &hm_s LEFT_CONTROL S  &hm_t LEFT_SHIFT T  &kp G            &kp M         &hm_n LEFT_SHIFT N  &hm_e LEFT_CONTROL E  &hm_i LEFT_ALT I  &hm_a_r LEFT_GUI A   &kp SINGLE_QUOTE
+&toMacModTap 0 ESCAPE   &kp W            &mt_fast LC(X) J      &mt_fast LC(C) V          &mt_fast LC(V) D        &mt_fast LC(Z) K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD            &mt LA(F4) DELETE
+                                                          &to_fast 5 TAB            &to_fast 7 SPACE        &kp BACKSPACE    &to_fast 4 ESCAPE  &to_fast 6 ENTER
             >;
         };
 
