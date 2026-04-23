@@ -11,7 +11,7 @@ layers:
   - F
   - O
   - U
-  - {t: /, h: '&toWin'}
+  - /
   - Gui+$$mdi:keyboard-space$$
   - RIGHT ALT
   - {t: C, h: LEFT CONTROL}
@@ -25,23 +25,23 @@ layers:
   - {t: I, h: LEFT ALT}
   - {t: A, h: LEFT CONTROL}
   - ''''
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: ESCAPE, h: '&toWin'}
   - W
-  - J
+  - {t: J, h: Gui+X}
   - {t: V, h: Gui+C}
   - {t: D, h: Gui+V}
-  - K
+  - {t: K, h: Gui+Z}
   - X
   - H
   - ':'
   - ','
   - .
   - {t: '$$mdi:backspace-reverse-outline$$', h: Gui+Q}
-  - {t: '$$mdi:keyboard-tab$$', h: NAV_M}
-  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
+  - {t: '$$mdi:keyboard-tab$$', h: MOUSE}
+  - {t: '$$mdi:keyboard-space$$', h: NAV_MAC}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ESCAPE, h: NUMB_M}
-  - {t: '$$mdi:keyboard-return$$', h: SYMB}
+  - {t: ESCAPE, h: SYMB}
+  - {t: '$$mdi:keyboard-return$$', h: NUM_MC}
   WIN:
   - Gui+$$mdi:keyboard-tab$$
   - Q
@@ -53,7 +53,7 @@ layers:
   - F
   - O
   - U
-  - {t: /, h: '&toMac 1'}
+  - /
   - Alt+$$mdi:keyboard-space$$
   - RIGHT ALT
   - {t: C, h: LEFT GUI}
@@ -67,108 +67,24 @@ layers:
   - {t: I, h: LEFT ALT}
   - {t: A, h: LEFT GUI}
   - ''''
-  - {t: '$$mdi:keyboard-return$$', h: MOUSE}
+  - {t: ESCAPE, h: '&toMac'}
   - W
-  - J
+  - {t: J, h: Ctl+X}
   - {t: V, h: Ctl+C}
   - {t: D, h: Ctl+V}
-  - K
+  - {t: K, h: Ctl+Z}
   - X
   - H
   - ':'
   - ','
   - .
   - {t: '$$mdi:backspace-reverse-outline$$', h: Alt+F4}
-  - {t: '$$mdi:keyboard-tab$$', h: NAV}
-  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
+  - {t: '$$mdi:keyboard-tab$$', h: MOUSE}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ESCAPE, h: NUMB}
-  - {t: '$$mdi:keyboard-return$$', h: SYMB}
-  NUMB_M:
-  - ''
-  - ''
-  - '7'
-  - '8'
-  - '9'
-  - ''
-  - F12
-  - F7
-  - F8
-  - F9
-  - ''
-  - ''
-  - $$mdi:apple-keyboard-option$$
-  - LEFT CONTROL
-  - {t: '4', h: LEFT ALT}
-  - {t: '5', h: LEFT GUI}
-  - {t: '6', h: LEFT SHIFT}
-  - ''
-  - F11
-  - {t: F4, h: LEFT SHIFT}
-  - {t: F5, h: LEFT GUI}
-  - {t: F6, h: LEFT ALT}
-  - LEFT CONTROL
-  - $$mdi:apple-keyboard-option$$
-  - ''
-  - ','
-  - '1'
-  - '2'
-  - '3'
-  - ''
-  - F10
-  - F1
-  - F2
-  - F3
-  - .
-  - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-space$$
-  - '0'
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ESCAPE, type: held}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  NAV_M:
-  - ''
-  - Gui+$$mdi:arrow-left-bold$$
-  - Gui+$$mdi:arrow-right-bold$$
-  - VOLUME DOWN
-  - VOLUME UP
-  - ''
-  - Alt+Ctl+Gui+$$mdi:arrow-left-bold$$
-  - INSERT
-  - PAGE DOWN
-  - PAGE UP
-  - Ctl+Alt+C
-  - Alt+Ctl+Gui+$$mdi:arrow-right-bold$$
-  - ''
-  - LEFT CONTROL
-  - $$mdi:apple-keyboard-option$$
-  - LEFT GUI
-  - $$mdi:apple-keyboard-shift$$
-  - Sft+Ctl+Gui+4
-  - Alt+Ctl+$$mdi:arrow-left-bold$$
-  - LEFT ARROW
-  - DOWN ARROW
-  - UP ARROW
-  - $$mdi:arrow-right-bold$$
-  - Ctl+Alt+$$mdi:arrow-right-bold$$
-  - BRIGHTNESS DEC
-  - BRIGHTNESS INC
-  - PREVIOUS
-  - PLAY PAUSE
-  - AC FORWARD
-  - ''
-  - ''
-  - {t: 'Ctl+Alt+$$mdi:keyboard-return$$', type: enter}
-  - HOME
-  - END
-  - {t: 'Alt+Ctl+$$mdi:backspace$$', type: backspace}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - ''
-  - ''
-  - '&caps_word'
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  NUMB:
+  - {t: ESCAPE, h: SYMB}
+  - {t: '$$mdi:keyboard-return$$', h: NUM}
+  NUM:
   - ''
   - ''
   - '7'
@@ -205,19 +121,61 @@ layers:
   - F3
   - .
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-space$$
   - '0'
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ESCAPE, type: held}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - ESCAPE
+  - {t: '$$mdi:keyboard-return$$', type: held}
+  NUM_MC:
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - ''
+  - F12
+  - F7
+  - F8
+  - F9
+  - ''
+  - ''
+  - $$mdi:apple-keyboard-option$$
+  - LEFT CONTROL
+  - {t: '4', h: LEFT ALT}
+  - {t: '5', h: LEFT GUI}
+  - {t: '6', h: LEFT SHIFT}
+  - ''
+  - F11
+  - {t: F4, h: LEFT SHIFT}
+  - {t: F5, h: LEFT WIN}
+  - {t: F6, h: LEFT ALT}
+  - LEFT CONTROL
+  - $$mdi:apple-keyboard-option$$
+  - ''
+  - ','
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - F10
+  - F1
+  - F2
+  - F3
+  - .
+  - $$mdi:backspace-reverse-outline$$
+  - '0'
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - ESCAPE
+  - {t: '$$mdi:keyboard-return$$', type: held}
   NAV:
   - ''
   - Gui+LEFT ARROW
-  - Gui+$$mdi:arrow-right-bold$$
+  - Gui+RIGHT ARROW
   - $$mdi:volume-low$$
   - VOLUME UP
   - ''
-  - Gui+Sft+LEFT ARROW
+  - Sft+Gui+$$mdi:arrow-left-bold$$
   - INSERT
   - PAGE DOWN
   - PAGE UP
@@ -247,13 +205,55 @@ layers:
   - END
   - Gui+Sft+DOWN ARROW
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - ''
+  - '&caps_word'
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  NAV_MAC:
+  - ''
+  - Gui+LEFT ARROW
+  - Gui+RIGHT ARROW
+  - $$mdi:volume-low$$
+  - VOLUME UP
+  - ''
+  - Alt+Ctl+Gui+$$mdi:arrow-left-bold$$
+  - INSERT
+  - PAGE DOWN
+  - PAGE UP
+  - Ctl+Alt+C
+  - Alt+Ctl+Gui+$$mdi:arrow-right-bold$$
+  - $$mdi:apple-keyboard-option$$
+  - LEFT CONTROL
+  - $$mdi:apple-keyboard-option$$
+  - LEFT GUI
+  - $$mdi:apple-keyboard-shift$$
+  - Gui+Sft+Ctl+4
+  - Alt+Ctl+LEFT ARROW
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - $$mdi:arrow-right-bold$$
+  - Ctl+Alt+$$mdi:arrow-right-bold$$
+  - BRIGHTNESS DEC
+  - BRIGHTNESS INC
+  - PREVIOUS
+  - PLAY PAUSE
+  - AC FORWARD
+  - $$mdi:keyboard-tab-reverse$$
+  - ''
+  - {t: 'Ctl+Alt+$$mdi:keyboard-return$$', type: enter}
+  - HOME
+  - END
+  - {t: 'Ctl+Alt+$$mdi:backspace$$', type: backspace}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - ''
   - '&caps_word'
   - {t: '$$mdi:keyboard-return$$', type: enter}
   SYMB:
-  - ''
+  - LEFT GUI
   - AltGr+/
   - '*'
   - '-'
@@ -264,20 +264,20 @@ layers:
   - '%'
   - ^
   - '&upDirectory'
-  - ''
-  - '&jsfn'
-  - {t: '~', h: LEFT CONTROL}
-  - {t: '?', h: LEFT ALT}
-  - {t: (, h: LEFT GUI}
-  - {t: ), h: LEFT SHIFT}
+  - LEFT GUI
+  - Gui+$$mdi:apple-keyboard-shift$$
+  - '~'
+  - '?'
+  - (
+  - )
   - '='
   - '`'
-  - {t: '{', h: LEFT SHIFT}
-  - {t: '}', h: LEFT GUI}
-  - {t: $, h: LEFT ALT}
-  - {t: '"', h: LEFT CONTROL}
-  - ''
-  - {t: AltGr+1, h: AltGr+Sft+1}
+  - '{'
+  - '}'
+  - $
+  - '"'
+  - Ctl+LEFT SHIFT
+  - {t: AltGr+Sft+1, h: AltGr+1}
   - \
   - '!'
   - '['
@@ -288,12 +288,12 @@ layers:
   - '>'
   - ;
   - AltGr+5
+  - '&jsfn'
   - ''
-  - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
+  - {type: held}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: held}
   MOUSE:
   - {t: WIN, h: toggle}
   - {t: ▽, type: trans}
@@ -307,7 +307,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:bluetooth-off$$
-  - {t: ▽, type: trans}
+  - BT CLR
   - '&msc SCRL_RIGHT'
   - '&mkp MCLK'
   - '&mkp RCLK'
@@ -319,7 +319,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - LEFT CONTROL
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:bluetooth-off$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MB4'
@@ -331,8 +331,8 @@ layers:
   - UP ARROW
   - RIGHT ARROW
   - BT NXT
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
